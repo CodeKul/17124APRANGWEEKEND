@@ -10,6 +10,7 @@ import { OurComponent } from './our/our.component';
 import { WhileComponent } from './our/while.component';
 import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulation.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { PropertyBindingComponent } from './databinding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
     OurComponent,
     WhileComponent,
     ViewEncapsulationComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
