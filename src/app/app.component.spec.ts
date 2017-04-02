@@ -3,6 +3,30 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
+  /*let app : AppComponent;
+
+  beforeEach(() => {
+    app = new AppComponent();
+  });
+
+  afterEach(() => {
+
+  });
+
+  beforeAll(() => {
+
+  });
+
+  afterAll(() => {
+
+  });
+
+  it('checking app title', () => {
+    let hl = 'app works!';
+    expect(hl).toBe(app.title);
+  });*/
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [

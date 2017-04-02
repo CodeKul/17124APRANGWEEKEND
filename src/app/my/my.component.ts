@@ -1,3 +1,4 @@
+import { MyService } from './my.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponent implements OnInit {
 
-  constructor() { }
+  user = {
+    name : 'android',
+    age :  10
+  };
+  constructor(
+    private my : MyService
+  ) { 
+    this.user.name = this.my.myName;
+  }
 
   ngOnInit() {
   }

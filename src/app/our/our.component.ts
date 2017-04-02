@@ -15,5 +15,4 @@ export class OurComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
