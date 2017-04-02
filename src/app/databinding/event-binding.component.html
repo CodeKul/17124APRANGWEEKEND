@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Event Binding</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <input [style.width]="inputWidth" type="text" [value]="inputData"> {{inputData}}
+    </div>
+    <div class="col-md-4">
+      <input (click)="inputWidth='300px'" type="button" class="btn btn-primary" value="Okay">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <p [class.myBorder]="isBordered">This is codekul.com</p><input (click)="isBordered=!isBordered" type="button" class="btn btn-primary" value="Okay">
+    </div>
+  </div>
+
+</div>
