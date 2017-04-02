@@ -12,6 +12,7 @@ import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulat
 import { DatabindingComponent } from './databinding/databinding.component';
 import { PropertyBindingComponent } from './databinding/property-binding.component';
 import { EventBindingComponent } from './databinding/event-binding.component';
+import { TwoWayBindingComponent } from './databinding/two-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EventBindingComponent } from './databinding/event-binding.component';
     ViewEncapsulationComponent,
     DatabindingComponent,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TwoWayBindingComponent
   ],
   imports: [
     BrowserModule,
