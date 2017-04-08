@@ -15,6 +15,9 @@ import { EventBindingComponent } from './databinding/event-binding.component';
 import { TwoWayBindingComponent } from './databinding/two-way-binding.component';
 import { CustomInputComponent } from './databinding/custom-input.component';
 import { CustomOutputComponent } from './databinding/custom-output.component';
+import { InterCompCommComponent } from './inter-comp-comm/inter-comp-comm.component';
+import { ColorEmiiterComponent } from './inter-comp-comm/color-emiiter.component';
+import { ColorReceiverComponent } from './inter-comp-comm/color-receiver.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { CustomOutputComponent } from './databinding/custom-output.component';
     EventBindingComponent,
     TwoWayBindingComponent,
     CustomInputComponent,
-    CustomOutputComponent
+    CustomOutputComponent,
+    InterCompCommComponent,
+    ColorEmiiterComponent,
+    ColorReceiverComponent
   ],
   imports: [
     BrowserModule,

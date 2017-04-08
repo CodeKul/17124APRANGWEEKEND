@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-color-emiiter (magicEvent)="onMagicInParent($event)"></app-color-emiiter>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-color-receiver [magicColor]="color"></app-color-receiver>
+    </div>
+  </div>
+</div>
