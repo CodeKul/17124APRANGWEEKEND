@@ -13,7 +13,11 @@ export class DatabindingComponent implements OnInit {
   ngOnInit() {
   }
 
-  giveMeName() : string{
+  giveMeName(): string {
     return this.myName + new Date();
+  }
+
+  onReceiveEvent(date: string) {
+    this.myName = date;
   }
 }

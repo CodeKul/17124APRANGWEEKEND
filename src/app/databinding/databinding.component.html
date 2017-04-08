@@ -43,4 +43,10 @@
       <app-custom-input [borderColor]="'1px solid red'"></app-custom-input>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-custom-output (customClick)="onReceiveEvent($event)"></app-custom-output>
+    </div>
+  </div>
 </div>
