@@ -13,6 +13,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { PropertyBindingComponent } from './databinding/property-binding.component';
 import { EventBindingComponent } from './databinding/event-binding.component';
 import { TwoWayBindingComponent } from './databinding/two-way-binding.component';
+import { CustomInputComponent } from './databinding/custom-input.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TwoWayBindingComponent } from './databinding/two-way-binding.component'
     DatabindingComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    CustomInputComponent
   ],
   imports: [
     BrowserModule,
