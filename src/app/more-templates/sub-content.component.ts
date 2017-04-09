@@ -31,6 +31,8 @@ import { Component, OnInit, ViewChild, ElementRef, ContentChild } from '@angular
 export class SubContentComponent implements OnInit {
 
     @ContentChild('ip') ip: ElementRef;
+    
+    actualIp : string;
 
     constructor() { }
 
@@ -38,6 +40,7 @@ export class SubContentComponent implements OnInit {
     }
 
     myIp() {
+      this.actualIp = this.ip.nativeElement.value;
         console.log(`sub called ${this.ip.nativeElement.value}`);
     }
 }
