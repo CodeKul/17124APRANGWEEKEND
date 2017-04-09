@@ -5,6 +5,10 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   template: `
     <div class="container">
       <div class="row">
+        <h1>View Child</h1>
+        <hr>
+      </div>
+      <div class="row">
         <div class="col-md-6">
           <input type="text" #header/>
           <input value="Okay" type="button" class="btn btn-primary" (click)="myHeader=header.value"/>

@@ -20,6 +20,7 @@ import { ColorEmiiterComponent } from './inter-comp-comm/color-emiiter.component
 import { ColorReceiverComponent } from './inter-comp-comm/color-receiver.component';
 import { MoreTemplatesComponent } from './more-templates/more-templates.component';
 import { SubMoreComponent } from './more-templates/sub-more.component';
+import { SubContentComponent } from './more-templates/sub-content.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SubMoreComponent } from './more-templates/sub-more.component';
     ColorEmiiterComponent,
     ColorReceiverComponent,
     MoreTemplatesComponent,
-    SubMoreComponent
+    SubMoreComponent,
+    SubContentComponent
   ],
   imports: [
     BrowserModule,
