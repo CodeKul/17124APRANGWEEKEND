@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ContentChild } from '@angular/core';
 
 @Component({
-  selector: 'app-sub-content',
-  template: `
+    selector: 'app-sub-content',
+    template: `
    <div class="container">
       <div class="row" >
        <div class="col-md-12">
@@ -26,13 +26,18 @@ import { Component, OnInit } from '@angular/core';
      </div> 
    </div>
   `,
-  styles: []
+    styles: []
 })
 export class SubContentComponent implements OnInit {
 
-  constructor() { }
+    @ContentChild('ip') ip: ElementRef;
 
-  ngOnInit() {
-  }
+    constructor() { }
 
+    ngOnInit() {
+    }
+
+    myIp() {
+        console.log(`sub called ${this.ip.nativeElement.value}`);
+    }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-more-templates',
@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MoreTemplatesComponent  {
 
+  @ViewChild('ip') ip : ElementRef;
   constructor() { }
 
+   myIp() {
+    console.log(`called ${this.ip.nativeElement.value}`);
+  }
 }
