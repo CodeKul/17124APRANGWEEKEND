@@ -21,6 +21,8 @@ import { ColorReceiverComponent } from './inter-comp-comm/color-receiver.compone
 import { MoreTemplatesComponent } from './more-templates/more-templates.component';
 import { SubMoreComponent } from './more-templates/sub-more.component';
 import { SubContentComponent } from './more-templates/sub-content.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { LifeCycleIndexComponent } from './lifecycle/life-cycle-index.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SubContentComponent } from './more-templates/sub-content.component';
     ColorReceiverComponent,
     MoreTemplatesComponent,
     SubMoreComponent,
-    SubContentComponent
+    SubContentComponent,
+    LifecycleComponent,
+    LifeCycleIndexComponent
   ],
   imports: [
     BrowserModule,
