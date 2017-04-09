@@ -18,6 +18,8 @@ import { CustomOutputComponent } from './databinding/custom-output.component';
 import { InterCompCommComponent } from './inter-comp-comm/inter-comp-comm.component';
 import { ColorEmiiterComponent } from './inter-comp-comm/color-emiiter.component';
 import { ColorReceiverComponent } from './inter-comp-comm/color-receiver.component';
+import { MoreTemplatesComponent } from './more-templates/more-templates.component';
+import { SubMoreComponent } from './more-templates/sub-more.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ColorReceiverComponent } from './inter-comp-comm/color-receiver.compone
     CustomOutputComponent,
     InterCompCommComponent,
     ColorEmiiterComponent,
-    ColorReceiverComponent
+    ColorReceiverComponent,
+    MoreTemplatesComponent,
+    SubMoreComponent
   ],
   imports: [
     BrowserModule,
