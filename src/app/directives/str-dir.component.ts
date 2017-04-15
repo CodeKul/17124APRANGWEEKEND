@@ -1,0 +1,42 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-str-dir',
+  template: `
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+            <li *ngFor="let mobile of mobiles">{{mobile}}</li>
+          </ul>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-8">
+          <input type="text" *ngIf="isShown; then thnBlk; else elsBlk" />
+
+          <ng-template #thnBlk>Then Block </ng-template>
+          <ng-template #elsBlk> Else This </ng-template>
+        </div>
+        <div class="col-md-4">
+           <input value="Okay" type="button" (click)="isShown = !isShown" class="btn btn-primary">
+        </div>
+      </div> 
+    </div>
+  `,
+  styles: []
+})
+export class StrDirComponent implements OnInit {
+
+  mobiles  = [
+    'Android',
+    'Apple',
+    'B B',
+    'Windows',
+    'Bada'
+  ];
+  constructor() { }
+
+  ngOnInit() {
+  }
+}

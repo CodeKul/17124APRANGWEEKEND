@@ -28,6 +28,7 @@ import { AttrDirComponent } from './directives/attr-dir.component';
 import { SizerDirective } from './directives/sizer.directive';
 import { ProjModOneComponent } from './proj-mod-one/proj-mod-one.component';
 import { DropdownDirective } from './proj-mod-one/dropdown.directive';
+import { StrDirComponent } from './directives/str-dir.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { DropdownDirective } from './proj-mod-one/dropdown.directive';
     AttrDirComponent,
     SizerDirective,
     ProjModOneComponent,
-    DropdownDirective
+    DropdownDirective,
+    StrDirComponent
   ],
   imports: [
     BrowserModule,
