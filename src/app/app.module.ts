@@ -23,6 +23,8 @@ import { SubMoreComponent } from './more-templates/sub-more.component';
 import { SubContentComponent } from './more-templates/sub-content.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { LifeCycleIndexComponent } from './lifecycle/life-cycle-index.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { AttrDirComponent } from './directives/attr-dir.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { LifeCycleIndexComponent } from './lifecycle/life-cycle-index.component'
     SubMoreComponent,
     SubContentComponent,
     LifecycleComponent,
-    LifeCycleIndexComponent
+    LifeCycleIndexComponent,
+    DirectivesComponent,
+    AttrDirComponent
   ],
   imports: [
     BrowserModule,
