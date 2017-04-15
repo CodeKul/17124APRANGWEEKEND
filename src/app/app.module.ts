@@ -26,6 +26,8 @@ import { LifeCycleIndexComponent } from './lifecycle/life-cycle-index.component'
 import { DirectivesComponent } from './directives/directives.component';
 import { AttrDirComponent } from './directives/attr-dir.component';
 import { SizerDirective } from './directives/sizer.directive';
+import { ProjModOneComponent } from './proj-mod-one/proj-mod-one.component';
+import { DropdownDirective } from './proj-mod-one/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { SizerDirective } from './directives/sizer.directive';
     LifeCycleIndexComponent,
     DirectivesComponent,
     AttrDirComponent,
-    SizerDirective
+    SizerDirective,
+    ProjModOneComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
