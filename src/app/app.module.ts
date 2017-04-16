@@ -29,6 +29,7 @@ import { SizerDirective } from './directives/sizer.directive';
 import { ProjModOneComponent } from './proj-mod-one/proj-mod-one.component';
 import { DropdownDirective } from './proj-mod-one/dropdown.directive';
 import { StrDirComponent } from './directives/str-dir.component';
+import { MyIfDirective } from './directives/my-if.directive';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { StrDirComponent } from './directives/str-dir.component';
     SizerDirective,
     ProjModOneComponent,
     DropdownDirective,
-    StrDirComponent
+    StrDirComponent,
+    MyIfDirective
   ],
   imports: [
     BrowserModule,

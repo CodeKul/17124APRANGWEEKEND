@@ -38,6 +38,20 @@ import { Component, OnInit } from '@angular/core';
             </ng-template>
           </div>
         </div> 
+        <div class="row">
+          <div class="col-md-12">
+            <ng-template [myIf]="isShown">
+              <div>This Custom Structural Directive </div>
+            </ng-template>
+          </div>
+        </div> 
+         <div class="row">
+          <div class="col-md-12">
+            <div *myIf="isShown">
+              This Sugured Custom Structural Directive
+            </div>
+          </div>
+        </div> 
     </div>
   `,
   styles: []
