@@ -1,3 +1,4 @@
+import { DataService } from './service/data.service';
 import { MyService } from './my/my.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,6 +33,7 @@ import { StrDirComponent } from './directives/str-dir.component';
 import { MyIfDirective } from './directives/my-if.directive';
 import { ServiceComponent } from './service/service.component';
 import { OneComponent } from './service/one.component';
+import { TwoComponent } from './service/two.component';
 
 @NgModule({
   declarations: [
@@ -62,14 +64,15 @@ import { OneComponent } from './service/one.component';
     StrDirComponent,
     MyIfDirective,
     ServiceComponent,
-    OneComponent
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [MyService],
+  providers: [MyService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

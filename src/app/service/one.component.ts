@@ -20,13 +20,13 @@ import { Component, OnInit } from '@angular/core';
       </div>
    </div>
   `,
-  styles: [],
-  providers: [DataService]
+  styles: []
+  // providers: [DataService]
 })
 export class OneComponent implements OnInit {
 
   mobiles: Array<string>;
-
+  
   constructor(private data: DataService) {
     this.mobiles = this.data.getMobiles();
   }

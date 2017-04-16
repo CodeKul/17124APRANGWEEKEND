@@ -1,8 +1,18 @@
+import { DataListener } from './data.service';
+import { EventEmitter } from '@angular/core';
+
+export interface DataListener {
+  listen(mob: string): void;
+}
+
 export class DataService {
-  private mobiles : Array<string>;
+
+  private eventEmmiter: EventEmitter<string>;
+  private mobiles: Array<string>;
 
   constructor() {
     this.mobiles = new Array<string>();
+    this.eventEmmiter = new EventEmitter<string>();
 
     this.addMobile('Android');
     this.addMobile('Apple');
@@ -15,7 +25,12 @@ export class DataService {
     return this.mobiles;
   }
 
-  addMobile(mob : string) {
+  addMobile(mob: string) {
     this.mobiles.push(mob);
+    this.eventEmmiter.emit(mob);
+  }
+
+  listen(dataListener: DataListener) {
+    this.eventEmmiter.subscribe(mob => dataListener.listen(mob));
   }
 }
