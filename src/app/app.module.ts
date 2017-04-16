@@ -1,3 +1,4 @@
+import { MapService } from './service/map.service';
 import { DataService } from './service/data.service';
 import { MyService } from './my/my.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -72,7 +73,7 @@ import { TwoComponent } from './service/two.component';
     FormsModule,
     HttpModule
   ],
-  providers: [MyService, DataService],
+  providers: [MyService, DataService, MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

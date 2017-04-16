@@ -1,10 +1,11 @@
 import { DataListener } from './data.service';
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 export interface DataListener {
   listen(mob: string): void;
 }
 
+@Injectable()
 export class DataService {
 
   private eventEmmiter: EventEmitter<string>;
