@@ -14,7 +14,6 @@ import { Component, OnInit } from '@angular/core';
        <div class="row">
         <div class="col-md-8">
           <input type="text" *ngIf="isShown; then thnBlk; else elsBlk" />
-
           <ng-template #thnBlk>Then Block </ng-template>
           <ng-template #elsBlk> Else This </ng-template>
         </div>
@@ -22,13 +21,30 @@ import { Component, OnInit } from '@angular/core';
            <input value="Okay" type="button" (click)="isShown = !isShown" class="btn btn-primary">
         </div>
       </div> 
+      <div class="row">
+        <div class="col-md-8">
+          <input type="text" #num/> <input (click)="numDay = num.value"type="button" class="btn btn-primary" value="Okay"/>
+          <div [ngSwitch]="numDay">
+            <div *ngSwitchCase="1">Monday</div>
+            <div *ngSwitchCase="2">Tuesday</div>
+            <div *ngSwitchCase="3">Wedensday</div>
+            <div *ngSwitchDefault>Sunday</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ng-template [ngIf]="isShown">
+              <div>This Visible</div>
+            </ng-template>
+          </div>
+        </div> 
     </div>
   `,
   styles: []
 })
 export class StrDirComponent implements OnInit {
 
-  mobiles  = [
+  mobiles = [
     'Android',
     'Apple',
     'B B',
