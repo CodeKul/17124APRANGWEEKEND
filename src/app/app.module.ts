@@ -35,6 +35,8 @@ import { MyIfDirective } from './directives/my-if.directive';
 import { ServiceComponent } from './service/service.component';
 import { OneComponent } from './service/one.component';
 import { TwoComponent } from './service/two.component';
+import { FormsComponent } from './forms/forms.component';
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { TwoComponent } from './service/two.component';
     MyIfDirective,
     ServiceComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    FormsComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
