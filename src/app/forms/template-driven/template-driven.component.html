@@ -4,37 +4,25 @@
       <div id="legend">
         <legend class="">Register</legend>
       </div>
-      <div class="control-group">
-        <!-- Username -->
-        <label class="control-label" for="username">Username</label>
-        <div class="controls">
-          <input 
-            type="text" 
-            id="username" 
-            name="username" 
-            placeholder="" 
-            class="input-xlarge"
-            [(ngModel)]="user.userName"
-            required>
-          <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-        </div>
-      </div>
+      <div ngModelGroup="info">
 
-      <div class="control-group">
-        <!-- E-mail -->
-        <label class="control-label" for="email">E-mail</label>
-        <div class="controls">
-          <input 
-            type="text" 
-            id="email" 
-            name="email" 
-            placeholder="" 
-            class="input-xlarge"
-            [(ngModel)]="user.email"
-            required
-            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-            #email="ngModel">
-          <p class="help-block" *ngIf="!email.valid">Please provide your E-mail</p>
+        <div class="control-group">
+          <!-- Username -->
+          <label class="control-label" for="username">Username</label>
+          <div class="controls">
+            <input type="text" id="username" name="username" placeholder="" class="input-xlarge" [(ngModel)]="user.userName" required>
+            <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <!-- E-mail -->
+          <label class="control-label" for="email">E-mail</label>
+          <div class="controls">
+            <input type="text" id="email" name="email" placeholder="" class="input-xlarge" [(ngModel)]="user.email" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+              #email="ngModel">
+            <p class="help-block" *ngIf="!email.valid">Please provide your E-mail</p>
+          </div>
         </div>
       </div>
 
@@ -42,14 +30,8 @@
         <!-- Password-->
         <label class="control-label" for="password">Password</label>
         <div class="controls">
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            placeholder="" 
-            class="input-xlarge"
-            [(ngModel)]="user.password"
-            required>
+          <input type="password" id="password" name="password" placeholder="" class="input-xlarge" [(ngModel)]="user.password" required
+            #pass="ngModel">
           <p class="help-block">Password should be at least 4 characters</p>
         </div>
       </div>
@@ -58,21 +40,28 @@
         <!-- Password -->
         <label class="control-label" for="password_confirm">Password (Confirm)</label>
         <div class="controls">
-          <input 
-            type="password" 
-            id="password_confirm" 
-            name="password_confirm" 
-            placeholder="" 
-            class="input-xlarge"
-            required>
+          <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge" required ngModel
+            #conPass>
           <p class="help-block">Please confirm password</p>
         </div>
       </div>
 
+       <div class="control-group">
+        <!-- Password -->
+        <label class="control-label" for="password_confirm">Password (Confirm)</label>
+        <div class="controls" *ngFor="let city of cities">
+          <input type="radio" name="city" [value]="city" [(ngModel)]="user.city">{{city}}
+          
+        </div>
+        <p class="help-block">Your city</p>
+      </div>
+
       <div class="control-group">
         <!-- Button -->
+        Pass = {{pass.value}} Con Pass = {{conPass.value}}
         <div class="controls">
-          <input type="submit" class="btn btn-success" value="Submit" [disabled]="!myForm.form.valid"/>
+          <input type="submit" class="btn btn-success" value="Submit" [disabled]="!(pass.value == conPass.value) || !myForm.form.valid"
+          />
         </div>
       </div>
     </fieldset>

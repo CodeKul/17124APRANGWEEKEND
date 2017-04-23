@@ -37,6 +37,7 @@ import { OneComponent } from './service/one.component';
 import { TwoComponent } from './service/two.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
+import { DataDrivenComponent } from './forms/data-driven.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
     OneComponent,
     TwoComponent,
     FormsComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    DataDrivenComponent
   ],
   imports: [
     BrowserModule,

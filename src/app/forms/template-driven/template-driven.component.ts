@@ -11,8 +11,13 @@ export class TemplateDrivenComponent implements OnInit {
   user = {
     userName : '',
     password : '',
-    email : ''
+    email : '',
+    city :''
   };
+
+  cities = [
+    'Pune', 'Mumbai', 'Delhi', 'Banglore'
+  ];
   constructor() { }
 
   ngOnInit() {
