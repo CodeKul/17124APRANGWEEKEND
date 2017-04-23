@@ -14,7 +14,8 @@
             name="username" 
             placeholder="" 
             class="input-xlarge"
-            [(ngModel)]="user.userName">
+            [(ngModel)]="user.userName"
+            required>
           <p class="help-block">Username can contain any letters or numbers, without spaces</p>
         </div>
       </div>
@@ -29,8 +30,11 @@
             name="email" 
             placeholder="" 
             class="input-xlarge"
-            [(ngModel)]="user.email">
-          <p class="help-block">Please provide your E-mail</p>
+            [(ngModel)]="user.email"
+            required
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+            #email="ngModel">
+          <p class="help-block" *ngIf="!email.valid">Please provide your E-mail</p>
         </div>
       </div>
 
@@ -44,7 +48,8 @@
             name="password" 
             placeholder="" 
             class="input-xlarge"
-            [(ngModel)]="user.password">
+            [(ngModel)]="user.password"
+            required>
           <p class="help-block">Password should be at least 4 characters</p>
         </div>
       </div>
@@ -58,7 +63,8 @@
             id="password_confirm" 
             name="password_confirm" 
             placeholder="" 
-            class="input-xlarge">
+            class="input-xlarge"
+            required>
           <p class="help-block">Please confirm password</p>
         </div>
       </div>
@@ -66,7 +72,7 @@
       <div class="control-group">
         <!-- Button -->
         <div class="controls">
-          <button class="btn btn-success">Register</button>
+          <input type="submit" class="btn btn-success" value="Submit" [disabled]="!myForm.form.valid"/>
         </div>
       </div>
     </fieldset>
