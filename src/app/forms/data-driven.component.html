@@ -5,22 +5,25 @@
                 <legend class="">Data Driven - Register</legend>
             </div>
             <div>
+                <div formGroupName="user">
+                    <div class="control-group">
+                        <!-- Username -->
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input formControlName="userName" type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                            <p class="help-block" >{{myForm.controls.user.controls.userName.errors?.isValid}}</p>
 
-                <div class="control-group">
-                    <!-- Username -->
-                    <label class="control-label" for="username">Username</label>
-                    <div class="controls">
-                        <input formControlName="userName" type="text" id="username" name="username" placeholder="" class="input-xlarge">
-                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                            <p class="help-block" *ngIf="myForm.controls.user.controls.userName.errors?.required">Please Enter Value</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="control-group">
-                    <!-- E-mail -->
-                    <label class="control-label" for="email">E-mail</label>
-                    <div class="controls">
-                        <input formControlName="email"type="text" id="email" name="email" placeholder="" class="input-xlarge">
-                        <p class="help-block">Please provide your E-mail</p>
+                    <div class="control-group">
+                        <!-- E-mail -->
+                        <label class="control-label" for="email">E-mail</label>
+                        <div class="controls">
+                            <input formControlName="email" type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                            <p class="help-block" *ngIf="!myForm.controls.user.controls.email.valid">Please provide your E-mail</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,11 +47,8 @@
             </div>
 
             <div class="control-group">
-                <!-- Password -->
-                <label class="control-label" for="password_confirm">Password (Confirm)</label>
-                <div class="controls">
-                    <input type="radio" name="city" />
-
+                <div class="controls" *ngFor="let city of cities">
+                    <input type="radio" formControlName="city" [value]="city" />{{city}}
                 </div>
                 <p class="help-block">Your city</p>
             </div>
@@ -56,7 +56,7 @@
             <div class="control-group">
                 <!-- Button -->
                 <div class="controls">
-                    <input type="submit" class="btn btn-success" value="Submit" [disabled]="!myForm.valid"/>
+                    <input type="submit" class="btn btn-success" value="Submit"  />
                 </div>
             </div>
         </fieldset>
