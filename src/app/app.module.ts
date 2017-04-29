@@ -38,6 +38,7 @@ import { TwoComponent } from './service/two.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { DataDrivenComponent } from './forms/data-driven.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [MyService, DataService, MapService],
   bootstrap: [AppComponent]
