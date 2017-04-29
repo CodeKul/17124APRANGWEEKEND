@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-data-driven',
@@ -11,9 +11,9 @@ export class DataDrivenComponent implements OnInit {
   myForm: FormGroup;
   constructor(formBuilder: FormBuilder) {
     this.myForm = formBuilder.group({
-      userName : formBuilder.control(''),
-      password : formBuilder.control(''),
-      email : formBuilder.control('')
+      userName: formBuilder.control('', [Validators.required, this.custValidator]),
+      password: formBuilder.control('', [Validators.required]),
+      email: formBuilder.control('', [Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")])
     });
   }
 
@@ -22,5 +22,10 @@ export class DataDrivenComponent implements OnInit {
 
   onSubmit() {
     console.log(this.myForm);
+  }
+
+  custValidator(fc: FormControl): { [key: string]: string } {
+    if (fc.value === 'an') return { isValid: 'failed' };
+    return null;
   }
 }
