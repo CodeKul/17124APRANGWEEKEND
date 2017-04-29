@@ -11,7 +11,7 @@
                         <label class="control-label" for="username">Username</label>
                         <div class="controls">
                             <input formControlName="userName" type="text" id="username" name="username" placeholder="" class="input-xlarge">
-                            <p class="help-block" >{{myForm.controls.user.controls.userName.errors?.isValid}}</p>
+                            <p class="help-block">{{myForm.controls.user.controls.userName.errors?.isValid}}</p>
 
                             <p class="help-block" *ngIf="myForm.controls.user.controls.userName.errors?.required">Please Enter Value</p>
                         </div>
@@ -54,9 +54,19 @@
             </div>
 
             <div class="control-group">
+                <!-- Password -->
+                <div class="controls">
+                    <div formArrayName="names" *ngFor="let nm of myForm.controls.names.value; let i = index;">
+                        <input type="text" [value]="nm" [formControlName]="i"/>
+                    </div>
+                    <input type="button" class="btn btn-primary" value="Add" (click)="onAdd()"/>
+                </div>
+            </div>
+
+            <div class="control-group">
                 <!-- Button -->
                 <div class="controls">
-                    <input type="submit" class="btn btn-success" value="Submit"  />
+                    <input type="submit" class="btn btn-success" value="Submit" />
                 </div>
             </div>
         </fieldset>
