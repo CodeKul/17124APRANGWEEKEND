@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Pipes</h1>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      Simple Pipe - {{cost | currency:"INR" }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Arguments to Pipe - {{dt| date:"dd-MM-yyyy"}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Chaining - {{name | slice:"0":"7" | uppercase}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      Custom Pile - {{name | custom:"1":"6"}}
+    </div>
+  </div>
+</div>

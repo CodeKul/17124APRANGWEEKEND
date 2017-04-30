@@ -39,6 +39,8 @@ import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
+import { CustomPipe } from './pipes/custom.pipe';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     TwoComponent,
     FormsComponent,
     TemplateDrivenComponent,
-    DataDrivenComponent
+    DataDrivenComponent,
+    PipesComponent,
+    CustomPipe
   ],
   imports: [
     BrowserModule,
