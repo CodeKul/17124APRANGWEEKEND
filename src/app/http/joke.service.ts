@@ -19,7 +19,7 @@ export class JokeService {
 
   postJoke(joke: string, onPost?: any) {
     this.http.post('https://digital-shelter-153912.firebaseio.com/joke.json', { joke: joke }).subscribe(res => {
-      onPost();
+      if(onPost) onPost();
     }, this.httpError);
   }
 

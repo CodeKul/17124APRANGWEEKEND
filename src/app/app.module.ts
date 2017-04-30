@@ -44,6 +44,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpComponent } from './http/http.component';
+import { HeavyComponent } from './http/heavy/heavy.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { HttpComponent } from './http/http.component';
     PipesComponent,
     CustomPipe,
     FilterPipe,
-    HttpComponent
+    HttpComponent,
+    HeavyComponent
   ],
   imports: [
     BrowserModule,
