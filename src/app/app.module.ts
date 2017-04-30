@@ -1,3 +1,4 @@
+import { JokeService } from './http/joke.service';
 import { MapService } from './service/map.service';
 import { DataService } from './service/data.service';
 import { MyService } from './my/my.service';
@@ -42,6 +43,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +81,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     DataDrivenComponent,
     PipesComponent,
     CustomPipe,
-    FilterPipe
+    FilterPipe,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
@@ -87,7 +90,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [MyService, DataService, MapService],
+  providers: [MyService, DataService, MapService, JokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
