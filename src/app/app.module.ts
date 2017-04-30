@@ -41,6 +41,7 @@ import { DataDrivenComponent } from './forms/data-driven.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { CustomPipe } from './pipes/custom.pipe';
     TemplateDrivenComponent,
     DataDrivenComponent,
     PipesComponent,
-    CustomPipe
+    CustomPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

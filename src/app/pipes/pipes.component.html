@@ -24,7 +24,30 @@
 
   <div class="row">
     <div class="col-md-12">
-      Custom Pile - {{name | custom:"1":"6"}}
+      Custom Pipe - {{name | custom:"1":"6"}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!--<input type="text" [(ngModel)]="sysNm" /> {{sysNm}}-->
+
+      <input type="text" #sysNm />
+      <input type="button" value="Add" class="btn btn-primary" (click)="add(sysNm.value)"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul>
+        <!--<li *ngFor="let system of (systems | filter:sysNm)">{{system}}</li>-->
+
+        <li *ngFor="let system of systems | filter:'a'">{{system}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      Async Pipe - {{future | async}}
     </div>
   </div>
 </div>
